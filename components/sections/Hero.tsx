@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "./Navbar";
 import { ArrowDown } from "lucide-react";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -14,7 +14,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
@@ -23,7 +23,7 @@ const itemVariants = {
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
   show: {
     opacity: 1,
@@ -34,7 +34,7 @@ const textVariants = {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] overflow-hidden bg-white mb-200">
+    <section className="relative w-full min-h-[100svh] overflow-hidden bg-white mb-32">
       {/* Navbar */}
       <div className="relative z-50 pt-2">
         <Navbar />
@@ -88,7 +88,7 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="mt-4 text-[#00B377] [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:4px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide [text-shadow:0_0_15px_rgba(255,255,255,1),0_0_30px_rgba(255,255,255,0.8)]">
+            <p className="mt-4 text-slate-800 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide [text-shadow:0_0_15px_rgba(255,255,255,1),0_0_30px_rgba(255,255,255,0.8)]">
              Ubah manajemen tradisional menjadi sistem otomatis yang akurat. Gunakan analitik AI untuk mencegah gagal panen dan maksimalkan pertumbuhan anggrek unggulan Anda.
             </p>
 

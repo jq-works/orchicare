@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "./Navbar";
@@ -79,16 +80,16 @@ export function Hero() {
           >
             {/* Added strong black drop shadow to make text pop against background without needing a box */}
             <h1 className="text-4xl md:text-5xl lg:text-[72px] font-black leading-[1.1] mb-6 tracking-tight">
-              <span className="text-[#00B377] [-webkit-text-stroke:10px_#fff] md:[-webkit-text-stroke:14px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
+              <span className="text-[#00B377] [-webkit-text-stroke:8px_#fff] md:[-webkit-text-stroke:14px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
                 Budidaya Anggrek
               </span>
               <br />
-              <span className="text-[#E39EB9] [-webkit-text-stroke:10px_#fff] md:[-webkit-text-stroke:14px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
+              <span className="text-[#E39EB9] [-webkit-text-stroke:8px_#fff] md:[-webkit-text-stroke:14px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
                 Berbasis AI & IoT
               </span>
             </h1>
 
-            <p className="mt-4 text-slate-800 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide [text-shadow:0_0_15px_rgba(255,255,255,1),0_0_30px_rgba(255,255,255,0.8)]">
+            <p className="mt-4 text-[#00B377] [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:6px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide [text-shadow:0_0_15px_rgba(255,255,255,1),0_0_30px_rgba(255,255,255,0.8)]">
              Ubah manajemen tradisional menjadi sistem otomatis yang akurat. Gunakan analitik AI untuk mencegah gagal panen dan maksimalkan pertumbuhan anggrek unggulan Anda.
             </p>
 
@@ -115,8 +116,14 @@ export function Hero() {
               variants={itemVariants}
               className="flex flex-wrap items-center justify-center gap-3 w-full"
             >
-              <Button className="bg-[#00B377] hover:bg-[#009966] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-sm md:text-base font-bold shadow-[0_8px_20px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 transition-all duration-300">
-                Demo Dashboard
+              <Button asChild className="bg-[#00B377] hover:bg-[#009966] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-sm md:text-base font-bold shadow-[0_8px_20px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 transition-all duration-300">
+                <Link 
+                  href="https://orchicare-dashboard.vercel.app/dashboard" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Demo Dashboard
+                </Link>
               </Button>
               <Button
                 variant="outline"

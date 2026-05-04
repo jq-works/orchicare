@@ -51,10 +51,10 @@ export function Navbar() {
             />
           </div>
           <div className="flex items-center text-xl sm:text-2xl md:text-3xl font-black tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
-            <span className="text-[#00B377] [-webkit-text-stroke:2px_#fff] [paint-order:stroke_fill]">
+            <span className="text-[#00B377] [-webkit-text-stroke:6px_#fff] [paint-order:stroke_fill]">
               ORCHI
             </span>
-            <span className="text-[#E39EB9] [-webkit-text-stroke:2px_#fff] [paint-order:stroke_fill]">
+            <span className="text-[#E39EB9] [-webkit-text-stroke:6px_#fff] [paint-order:stroke_fill]">
               CARE
             </span>
           </div>
@@ -66,7 +66,7 @@ export function Navbar() {
             <Link 
               key={link.name} 
               href={link.href} 
-              className="text-[#00B377] [-webkit-text-stroke:1.5px_#fff] [paint-order:stroke_fill] hover:text-[#E39EB9] transition-colors duration-300"
+              className="text-[#00B377] [-webkit-text-stroke:4px_#fff] [paint-order:stroke_fill] hover:text-[#E39EB9] transition-colors duration-300"
             >
               {link.name}
             </Link>
@@ -91,7 +91,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-white/10 backdrop-blur-sm flex flex-col items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-8 text-2xl font-black uppercase tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
               {navLinks.map((link, index) => (
@@ -104,7 +104,7 @@ export function Navbar() {
                   <Link 
                     href={link.href} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[#00B377] [-webkit-text-stroke:2px_#fff] [paint-order:stroke_fill] hover:text-[#E39EB9] transition-colors duration-300"
+                    className="text-[#00B377] [-webkit-text-stroke:4px_#fff] [paint-order:stroke_fill] hover:text-[#E39EB9] transition-colors duration-300"
                   >
                     {link.name}
                   </Link>

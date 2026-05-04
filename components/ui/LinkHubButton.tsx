@@ -1,4 +1,4 @@
-import { Button } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 import { ReactNode } from "react";
 
 interface LinkHubButtonProps {
@@ -11,7 +11,7 @@ interface LinkHubButtonProps {
 export function LinkHubButton({ icon, label, href, isPrimary = false }: LinkHubButtonProps) {
   return (
     <Button
-      as="a"
+      as={Link}
       href={href}
       target="_blank"
       rel="noopener noreferrer"

@@ -137,7 +137,7 @@ export function Problem() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ y: -5, shadow: "0 20px 40px rgba(0,179,119,0.08)" }}
+          whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,179,119,0.08)" }}
           viewport={{ once: true }}
           className="p-6 md:p-8 rounded-[2.5rem] bg-[#00B377]/5 border-2 border-[#00B377]/10 flex flex-col md:flex-row gap-6 md:gap-8 shadow-sm backdrop-blur-sm relative overflow-hidden group transition-all duration-500"
         >

@@ -130,21 +130,36 @@ export function Solution() {
         </div>
 
         {/* Highlight Section: CTA Box Premium (Samakan dengan Fakta Sektor) */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ y: -5, shadow: "0 20px 40px rgba(0,179,119,0.08)" }}
+          whileHover={{ y: -8, boxShadow: "0 40px 80px -15px rgba(0,179,119,0.12)" }}
           viewport={{ once: true }}
-          className="mt-12 p-6 md:p-10 rounded-[2.5rem] bg-[#00B377]/5 border-2 border-[#00B377]/10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-sm backdrop-blur-sm relative overflow-hidden group transition-all duration-500"
+          className="mt-12 p-8 md:p-14 rounded-[3rem] bg-white border-2 border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-slate-200/40 relative overflow-hidden group transition-all duration-700"
         >
-          {/* Animated Ornament (Identik dengan Problem) */}
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.05, 0.15, 0.05],
+          {/* Subtle Mesh Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#00B377]/5 via-white to-[#E39EB9]/5 pointer-events-none" />
+          
+          {/* Enhanced Smooth Animated Ornaments */}
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.5, 1],
+              opacity: [0.1, 0.2, 0.1],
+              x: [0, 50, 0],
+              y: [0, -30, 0]
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-80 h-80 bg-[#00B377] rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -top-20 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-[#00B377]/20 to-transparent rounded-full blur-[120px] pointer-events-none" 
+          />
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.4, 1],
+              opacity: [0.05, 0.15, 0.05],
+              x: [0, -40, 0],
+              y: [0, 40, 0]
+            }}
+            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-[#E39EB9]/20 to-transparent rounded-full blur-[120px] pointer-events-none" 
           />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 w-full">

@@ -143,7 +143,7 @@ export function Technology() {
 
               <div className="mt-auto p-5 rounded-2xl bg-[#E39EB9]/5 border border-[#E39EB9]/10">
                 <p className="text-[11px] text-[#E39EB9] font-mono italic">
-                  // Firmware optimized for ultra low-latency & battery efficiency.
+                  {"// Firmware optimized for ultra low-latency & battery efficiency."}
                 </p>
               </div>
             </div>

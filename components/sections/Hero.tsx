@@ -89,22 +89,23 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="mt-4 text-[#00B377] [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:3px_#fff] [paint-order:stroke_fill] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide [text-shadow:0_0_15px_rgba(255,255,255,1),0_0_30px_rgba(255,255,255,0.8)]">
+            <p className="mt-4 text-slate-600 drop-shadow-xs  drop-shadow-white text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide [-webkit-text-stroke:1px_#fff] md:[-webkit-text-stroke:2px_#fff] [paint-order:stroke_fill]">
              Ubah manajemen tradisional menjadi sistem otomatis yang akurat. Gunakan analitik AI untuk mencegah gagal panen dan maksimalkan pertumbuhan anggrek unggulan Anda.
             </p>
 
-            {/* Bouncing Arrow Button */}
-            <motion.div
-              animate={{ y: [0, 15, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 2.5,
-                ease: "easeInOut",
-              }}
-              className="mt-10 w-14 h-14 bg-white/80 backdrop-blur-md border-2 border-white hover:bg-white transition-colors rounded-full flex items-center justify-center text-[#00B377] shadow-[0_10px_20px_rgba(0,0,0,0.2)] cursor-pointer"
-            >
-              <ArrowDown size={28} strokeWidth={3} />
-            </motion.div>
+            <Link href="#problem">
+              <motion.div
+                animate={{ y: [0, 15, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2.5,
+                  ease: "easeInOut",
+                }}
+                className="mt-10 w-14 h-14 bg-white/80 backdrop-blur-md border-2 border-white hover:bg-white transition-colors rounded-full flex items-center justify-center text-[#00B377] shadow-[0_10px_20px_rgba(0,0,0,0.2)] cursor-pointer"
+              >
+                <ArrowDown size={28} strokeWidth={3} />
+              </motion.div>
+            </Link>
           </motion.div>
 
           <div className="flex-1 min-h-[40px]"></div>

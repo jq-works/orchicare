@@ -1,18 +1,21 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { ProblemSolution } from "@/components/sections/ProblemSolution";
+import { Problem } from "@/components/sections/Problem";
+import { Solution } from "@/components/sections/Solution";
+import { Technology } from "@/components/sections/Technology";
+import { Team } from "@/components/sections/Team";
+import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <ProblemSolution/>
-      
-      {/* Nanti kita letakkan section lain di bawah sini */}
-      {/* <ProblemSolutionSection /> */}
-      {/* <LinkHubSection /> */}
-      {/* <TeamSection /> */}
+      <Problem/>
+      <Solution/>
+      <Technology/>
+      <Team />
+      <Footer/>
     </>
   );
 }

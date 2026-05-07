@@ -13,23 +13,27 @@ interface SolutionCardProps {
 
 export function SolutionCard({ icon: Icon, title, description, className }: SolutionCardProps) {
   return (
-    <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }} className={`h-full ${className || ''}`}>
-      <Card className="border border-white/20 bg-[#00B377] text-white rounded-[2rem] shadow-[0_4px_15px_rgba(0,179,119,0.15)] relative overflow-hidden group h-full hover:shadow-[0_8px_25px_rgba(0,179,119,0.3)] transition-all duration-500">
-        {/* Efek Pendaran Cahaya (Glossy) */}
-        <div className="absolute -top-12 -right-12 w-40 h-40 bg-white/20 rounded-full blur-[40px] group-hover:bg-white/30 group-hover:scale-150 transition-all duration-700" />
+    <motion.div 
+      whileHover={{ y: -5 }} 
+      transition={{ duration: 0.3 }} 
+      className={`h-full ${className || ''}`}
+    >
+      <div className="p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#00B377]/20 transition-all duration-500 relative overflow-hidden group h-full">
+        {/* Glow Effect on Hover */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#00B377]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
-        <CardContent className="p-5 md:p-6 relative z-10 flex gap-4 md:gap-5 items-start">
-          <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover:bg-white group-hover:text-[#00B377] transition-all duration-300 shadow-inner">
-            <Icon size={24} className="drop-shadow-sm transition-colors duration-300" />
+        <div className="relative z-10 flex flex-col md:flex-row gap-5 items-start">
+          <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#00B377] flex items-center justify-center text-white shadow-lg shadow-[#00B377]/20 group-hover:scale-110 transition-transform duration-500">
+            <Icon size={24} />
           </div>
           <div>
-            <h4 className="font-bold text-white text-lg mb-1 tracking-tight drop-shadow-sm">{title}</h4>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
+            <h4 className="font-bold text-slate-800 text-lg md:text-xl mb-2 tracking-tight group-hover:text-[#00B377] transition-colors">{title}</h4>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
               {description}
             </p>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </motion.div>
   );
 }
